@@ -1,0 +1,431 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@font-face{
+    font-family: 'Benguiat Bk BT';
+    src: url("./fonte/Benguiat Bk BT.ttf");
+} 
+
+:root {
+    --cor-texto: #C7AEAE;
+    --cor-background: #0a0101;
+
+    --fonte-primaria: 'Poppins', sans-serif;
+    --fonte-secundaria:  "Benguiat Bk BT", serif;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    background-color: var(--cor-background);
+    color: var(--cor-texto);
+    overflow-x: hidden;
+}
+
+button{
+    font-family: var(--fonte-primaria);
+    font-size: 1.2vw;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: var(--cor-texto);
+    border-bottom: 1px solid var(--cor-texto);
+}
+
+
+button:hover{
+    color: var(--cor-background);
+    background-color: var(--cor-texto);
+    transition: 0.5s;
+} 
+
+
+h1{
+    font-family: var(--fonte-secundaria);
+    font-size: 4vw;
+}
+
+h3,h2{
+    font-family: var(--fonte-primaria);
+    letter-spacing: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+h4{
+    font-family: var(--fonte-secundaria);
+    font-size: 2rem;
+}
+ul {
+  list-style-type: none;
+}
+
+section{
+    width: 100%;
+    display: flex;
+    padding: 4vw;
+}
+/* HEADER */
+header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 4vw;
+    position: absolute;
+    z-index: 9;
+}
+
+/* SECTION 1 -  HERO */
+
+.hero{
+    background-position: 50% 0%;
+    background-size: cover;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7vw 7vw 7vw;
+    position: relative;
+
+    picture{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        top: 0;
+    }
+
+    .banner{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+    }
+}
+
+.hero-texto{
+    position: relative;
+    z-index: 3;
+
+    width: 100%;
+    padding-top: 30vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.esquerda{
+   width: 25%;
+   height: 280px;
+   h1{
+    font-size: 5vw;
+    }
+    h3{
+        font-size: 14px;
+    }
+}
+
+.direita{
+   width: 30%;
+   height: 80px;
+   text-align: end;
+
+    p{
+    font-size: 2.4vw;
+    margin-bottom: 24px;
+    
+   }
+
+}
+.hero:before{
+  content: "";
+  background: linear-gradient(180deg, rgba(12, 1, 2, 0.00) 0%, #0C0102 100%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+}
+
+/* SECTION 2 - CIDADES */
+
+.secaoCidade{
+    flex-direction: column;
+    .titulo{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .cards{
+        margin-top: 4vw;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .card{
+            width: 30%;
+            opacity: 80%;
+            aspect-ratio: 9/16;
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2vw;
+            cursor: pointer;
+        }
+
+        .card:nth-child(1){
+            background-image: url("./images/card1_2x.webp");
+        }
+        .card:nth-child(2){
+            background-image: url("./images/card2_2x.webp");
+        }
+        .card:nth-child(3){
+            background-image: url("./images/card3_2x.webp");
+        }
+        
+
+    }
+}
+
+/* SECTION 3 - DEPOIMENTOS */
+
+.bgMostro{
+    background-image: url("./images/bg-sec2.webp");
+    background-position: center;
+    background-size: cover;
+    background-color: var(--cor-background);
+    position: relative;
+    z-index: 2;
+}
+
+.secaoDepoimentos{
+    flex-direction: column;
+
+    .logotipos{
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+    }
+    .depoimentos{
+          margin-top: 8vh;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .depoimento{
+            width: 30%;
+          }
+    }
+}
+
+/* SECTION 4 - OBRIGADO */
+
+.secaoObrigado{
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--cor-background);
+    z-index: 2;
+    position: relative;
+
+    ul{
+        margin-top: 40px;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+
+}
+
+/* FOOTER */
+
+footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(./images/bg-footer.webp);
+    background-size: cover;
+    background-position: center;
+
+    .conteudoFooter{
+        
+        display: flex;
+        width: 100%;
+        padding: 10vw 4vw;
+        
+        h1{font-size: 32px;}
+        h3{
+            font-size: 12px;
+            letter-spacing: 4px;
+        }
+   
+       .logoFooter{  
+        width: 30%; 
+        }
+       .secoesFooter{
+        display: flex;
+        justify-content: end;
+        align-items: end;
+        flex:1;
+        gap: 2vw;
+
+        h3{
+         margin-bottom: 12px;
+        }
+        .social{
+    
+            ul{
+                display: flex;
+                gap: 12px;
+            }
+          }
+        }
+    }
+    .logotiposFooter{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 4vw;
+    }
+    .textoInfinito{
+        display: flex;
+        width: max-content;
+        h1{
+            font-size: 12vw;
+            mix-blend-mode: color-dodge;
+            padding: 0 3vw;
+        }
+    }
+}
+
+/* Preloader */
+
+
+#preloader{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-background);
+
+    svg{
+        width: 40vw;
+        height: auto;
+    }
+
+    path{
+        fill:rgba(168,19,19,0.5);
+        stroke:rgba(209, 46, 46, 0.665);
+        stroke-dasharray: 980;
+        stroke-dashoffset: 980;
+    }
+  
+}
+
+
+/* Responsivo */
+@media (max-width: 768px){
+    .hero-texto h1{
+        font-size: 12vw;
+    }
+    h2,h3{
+        font-size: 3vw;
+        letter-spacing: 6px;
+    }
+    button{
+        font-size: 3vw;
+    }
+    .hero-texto{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 4vw;
+        padding-top: 0vh;
+    }
+    .esquerda, .direita{
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+    .direita p{
+        font-size: 4vw;
+    }
+    .secaoCidade .titulo{
+        flex-direction: column;
+        gap: 2vw;
+    }
+    .secaoCidade .cards{
+        flex-direction: column;
+        gap: 2vw;
+
+        .card{
+            width: 80%;
+            aspect-ratio: auto;
+        }
+    }
+    .secaoDepoimentos {
+        .logotipos{
+            flex-direction: column;
+            gap: 2vw;
+            align-items: center;
+        }
+    
+        .depoimentos{
+            flex-direction: column;
+            gap: 2vw;
+            .depoimento{
+                width: 80%;
+
+                p{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+            }
+         }       
+    }
+
+    .secaoObrigado ul{
+        flex-direction: column;
+        gap: 4vw;
+        align-items: center;
+
+        h3{
+            align-items: center;
+        }
+        .hide-mobile{
+            display: none;
+        }
+    }
+    
+    footer .conteudoFooter{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 4vw;
+    }
+    footer .secoesFooter{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    footer .logotiposFooter{
+        img{
+            width: 20%;
+        }
+    }
+}
+
