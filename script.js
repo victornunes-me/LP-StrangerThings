@@ -33,7 +33,6 @@ gsap.from(".secaoCidade",{
          start: "-10% 40%",
          end: "100% 70%",
          scrub:1,
-         markers: false,
       },
       opacity:0,
       duration:1,
@@ -43,7 +42,6 @@ gsap.from(".secaoCidade",{
 gsap.from(".card",{
     scrollTrigger: {
       trigger: ".cards",
-       markers: false,
        start: "0 60%",
        end: "50% 70%",
        scrub: 2,
@@ -60,7 +58,6 @@ gsap.from(".card",{
 gsap.from(".secaoObrigado ul",{
    scrollTrigger: {
       trigger: ".secaoObrigado ul",
-      markers: false,
       start: "0 80%",
       end: "100% 70%",
       scrub:3,
@@ -78,7 +75,7 @@ gsap.from(".secaoObrigado ul",{
 gsap.from("footer",{ 
    scrollTrigger: {
       trigger: "footer",
-      markers: true,
+      markers: false,
       start: "40% 80%",
       end: "80% 100%",
       scrub:2,
@@ -152,5 +149,5 @@ TLpreloader.to("#preloader",{
 
 
 
-
+//teste
 

@@ -337,8 +337,16 @@ footer{
 
 /* Responsivo */
 @media (max-width: 768px){
-    .hero-texto h1{
+    .hero-texto {
+        h1{
         font-size: 12vw;
+        }
+        p{
+        font-size: 10vw;
+        }
+        button{
+        font-size: 6vw;
+        }
     }
     h2,h3{
         font-size: 3vw;
@@ -387,12 +395,6 @@ footer{
             gap: 2vw;
             .depoimento{
                 width: 80%;
-
-                p{
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                }
             }
          }       
     }
